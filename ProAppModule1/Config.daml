@@ -1,0 +1,37 @@
+﻿<ArcGIS defaultAssembly="ProAppModule1.dll" defaultNamespace="ProAppModule1" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///E:/Program%20Files/ArcGISPro/bin/ArcGIS.Desktop.Framework.xsd">
+  <AddInInfo id="{cada8883-89aa-4ea5-bf65-22ed9257d32b}" version="1.0" desktopVersion="2.5.22081">
+    <Name>ProAppModule1</Name>
+    <Description>ProAppModule1 description</Description>
+    <Image>Images\AddinDesktop32.png</Image>
+    <Author>Q1826</Author>
+    <Company>Acme</Company>
+    <Date>2021/12/29 14:46:46, 2021</Date>
+    <Subject>Framework</Subject>
+    <!-- Note subject can be one or more of these topics:
+                    Content, Framework, Editing, Geodatabase, Geometry, Geoprocessing, Layouts, Map Authoring, Map Exploration -->
+  </AddInInfo>
+  <modules>
+    <insertModule id="ProAppModule1_Module" className="Module1" autoLoad="false" caption="Module1">
+      <!-- uncomment to have the control hosted on a separate tab-->
+      <tabs>
+        <!--<tab id="ProAppModule1_Tab1" caption="New Tab">
+          <group refID="ProAppModule1_Group1"/>
+        </tab>-->
+      </tabs>
+      <groups>
+        <!-- comment this out if you have no controls on the Addin tab to avoid
+              an empty group-->
+        <group id="ProAppModule1_Group1" caption="Group 1" appearsOnAddInTab="true">
+          <!-- host controls within groups -->
+          <button refID="ProAppModule1_ReadTIFFButton" size="large" />
+        </group>
+      </groups>
+      <controls>
+        <!-- add your controls here -->
+        <button id="ProAppModule1_ReadTIFFButton" caption="ReadTIFFButton" className="ReadTIFFButton" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+      </controls>
+    </insertModule>
+  </modules>
+</ArcGIS>
